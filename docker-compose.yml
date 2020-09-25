@@ -24,7 +24,7 @@ services:
     image: minio/mc
     entrypoint: |
       sh -c 'sh -s << EOF
-      mc config host add tmp minio:9000 EXAMPLEKEY EXAMPLESECRET
+      mc config host add tmp http://minio:9000 EXAMPLEKEY EXAMPLESECRET
       mc mb tmp/thanos
       mc config host rm tmp
       sleep 10000000
